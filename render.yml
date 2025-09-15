@@ -2,8 +2,12 @@ services:
   - type: web
     name: n8n
     env: docker
-    plan: starter     # puedes probar con free, pero starter es más estable
+    plan: starter
     autoDeploy: true
+
+    envVars:
+      - key: N8N_USER_FOLDER
+        value: /home/node/.n8n
 
     disk:
       name: n8n-data
@@ -12,3 +16,4 @@ services:
 
     buildCommand: ""
     startCommand: "n8n start"
+

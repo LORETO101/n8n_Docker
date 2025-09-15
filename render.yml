@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    plan: free     # puedes probar con free, pero starter es más estable
+    autoDeploy: true
+
+    disk:
+      name: n8n-data
+      mountPath: /var/lib/n8n
+      sizeGB: 1
+
+    envVars:
+      - key: N8N_USER_FOLDER
+        value: /var/lib/n8n
+      - key: N8N_PORT
+        value: 5678
+      - key: N8N_HOST
+        value: 0.0.0.0
+      - key: WEBHOOK_URL
+        value: https://n8n2-u3yd.onrender.com/
+      - key: N8N_ENCRYPTION_KEY
+        generateValue: true

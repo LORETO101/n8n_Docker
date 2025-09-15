@@ -10,14 +10,5 @@ services:
       mountPath: /var/lib/n8n
       sizeGB: 1
 
-    envVars:
-      - key: N8N_USER_FOLDER
-        value: /var/lib/n8n
-      - key: N8N_PORT
-        value: 5678
-      - key: N8N_HOST
-        value: 0.0.0.0
-      - key: WEBHOOK_URL
-        value: https://n8n-docker-k7zo.onrender.com/
-      - key: N8N_ENCRYPTION_KEY
-        generateValue: true
+    buildCommand: ""
+    startCommand: "n8n start"

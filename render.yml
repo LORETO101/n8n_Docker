@@ -8,6 +8,8 @@ services:
     envVars:
       - key: N8N_USER_FOLDER
         value: /home/node/.n8n
+      - key: GENERIC_TIMEZONE
+        value: Europe/Madrid
 
     disk:
       name: n8n-data
@@ -15,5 +17,5 @@ services:
       sizeGB: 1
 
     buildCommand: ""
-    startCommand: "n8n start"
+    startCommand: "n8n start --userFolder=/home/node/.n8n"
 

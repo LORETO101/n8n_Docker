@@ -5,10 +5,10 @@ services:
     plan: free     # puedes probar con free, pero starter es más estable
     autoDeploy: true
 
-    disk:
-      name: n8n-data
-      mountPath: /var/lib/n8n
-      sizeGB: 1
+    #disk:
+    #  name: n8n-data
+    #  mountPath: /var/lib/n8n
+    #  sizeGB: 1
 
     buildCommand: ""
     startCommand: "n8n start"

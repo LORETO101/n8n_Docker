@@ -2,13 +2,13 @@ services:
   - type: web
     name: n8n
     env: docker
-    plan: free     # puedes probar con free, pero starter es más estable
+    plan: starter     # puedes probar con free, pero starter es más estable
     autoDeploy: true
 
-    #disk:
-    #  name: n8n-data
-    #  mountPath: /var/lib/n8n
-    #  sizeGB: 1
+    disk:
+      name: n8n-data
+      mountPath: /var/lib/n8n
+      sizeGB: 1
 
     buildCommand: ""
     startCommand: "n8n start"

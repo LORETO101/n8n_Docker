@@ -7,7 +7,7 @@ services:
 
     disk:
       name: n8n-data
-      mountPath: /var/lib/n8n
+      mountPath: /home/node/.n8n
       sizeGB: 1
 
     buildCommand: ""

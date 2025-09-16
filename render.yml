@@ -8,9 +8,9 @@ services:
 
     disk:
       name: n8n-data
-      mountPath: /opt/render/n8n
+      mountPath: /data
       sizeGB: 1
 
     buildCommand: ""
-    startCommand: "n8n start --userFolder=/opt/render/n8n"
+    startCommand: "n8n start --userFolder=/data"
 

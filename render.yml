@@ -5,15 +5,6 @@ services:
     plan: starter
     autoDeploy: true
 
-    envVars:
-      - key: N8N_USER_FOLDER
-        value: /home/node/.n8n
-      - key: GENERIC_TIMEZONE
-        value: Europe/Madrid
-      - key: N8N_PORT
-        value: 5678
-      - key: WEBHOOK_URL
-        value: https://n8n-docker-pyg7.onrender.com
 
     disk:
       name: n8n-data
